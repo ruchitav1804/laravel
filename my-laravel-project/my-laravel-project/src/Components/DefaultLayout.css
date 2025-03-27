@@ -1,0 +1,235 @@
+/* --- Layout container --- */
+.layout-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8fafc;
+  }
+  
+  /* --- Sidebar --- */
+  .sidebar {
+    width: 220px;
+    background-color: #1e293b;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #f8fafc;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar nav ul li {
+    margin: 10px 0;
+  }
+  
+  .sidebar nav ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .sidebar nav ul li a:hover {
+    color: #f1f5f9;
+  }
+  
+  .sidebar hr {
+    border: none;
+    border-bottom: 1px solid #334155;
+    margin: 10px 0;
+  }
+  
+  .header-right a {
+    color: #f87171;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .header-right a:hover {
+    color: #ef4444;
+  }
+  
+  /* --- Content Area --- */
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* --- Header --- */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    color: #f8fafc;
+  }
+  
+  .header-left h1 {
+    font-size: 24px;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-right .user-name {
+    margin-right: 15px;
+    font-weight: bold;
+  }
+  
+  /* --- Breadcrumbs Container --- */
+  .breadcrumbs-container {
+    background-color: #f1f5f9;
+    padding: 3px 24px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  /* --- Page Title and Breadcrumbs --- */
+  .page-title-breadcrumb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* for responsiveness */
+  }
+  
+  .page-title h2 {
+    font-size: 15px;
+    color: #1e293b;
+    margin: 0;
+  }
+  
+  /* --- Breadcrumb links --- */
+  .breadcrumb-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+  
+  .breadcrumb-container a {
+    color: #334155;
+    text-decoration: none;
+  }
+  
+  .breadcrumb-container a:hover {
+    color: #1e293b;
+    text-decoration: underline;
+  }
+  
+  .breadcrumb-container span {
+    margin: 0 5px;
+  }
+  
+  /* --- Main Content --- */
+  main {
+    flex: 1;
+    padding: 20px 30px;
+  }
+  
+  /* ----------------------------- */
+  /*          RESPONSIVE           */
+  /* ----------------------------- */
+  
+  /* Tablet view */
+  @media (max-width: 1024px) {
+    .sidebar {
+      width: 200px;
+      padding: 15px;
+    }
+  
+    .sidebar h2 {
+      font-size: 20px;
+    }
+  
+    .sidebar nav ul li a {
+      font-size: 14px;
+    }
+  
+    .header-left h1 {
+      font-size: 20px;
+    }
+  
+    .breadcrumbs-container {
+      padding: 8px 20px;
+    }
+  
+    main {
+      padding: 15px 20px;
+    }
+  }
+  
+  /* Mobile view */
+  @media (max-width: 768px) {
+    .layout-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      flex-direction: row;
+      overflow-x: auto;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+  
+    .sidebar nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+    }
+  
+    .sidebar nav ul li {
+      margin: 0 5px;
+    }
+  
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 20px;
+    }
+  
+    .header-left h1 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  
+    .header-right {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .breadcrumbs-container {
+      padding: 8px 20px;
+    }
+  
+    .page-title-breadcrumb {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  
+    .page-title h2 {
+      font-size: 18px;
+    }
+  
+    .breadcrumb-container {
+      font-size: 12px;
+    }
+  
+    main {
+      padding: 10px 20px;
+    }
+  }
+  

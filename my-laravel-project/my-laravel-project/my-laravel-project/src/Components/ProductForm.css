@@ -1,0 +1,96 @@
+.product-form-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .product-form {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 13px;
+  }
+  
+  input,
+  textarea,
+  select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 60px;
+  }
+  
+  .date-picker {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .form-actions {
+    grid-column: span 3;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .save-button {
+    background-color: #0045ff;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .cancel-button {
+    background-color: #aaa;
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 768px) {
+    .product-form {
+      grid-template-columns: 1fr;
+    }
+  
+    .form-actions {
+      justify-content: center;
+    }
+  }
+  
